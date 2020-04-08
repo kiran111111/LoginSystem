@@ -4,7 +4,8 @@ const mongo = require("mongo");
 const mongoose = require("mongoose");
 
 
-const db = process.env.MONGODB_URI;
+// const db = process.env.MONGODB_URI ;
+const db ="mongodb+srv://kiran:kiran@cluster0-zrsby.mongodb.net/test?retryWrites=true&w=majority";
 
 const ConnectDB = async ()=>{
   try{
