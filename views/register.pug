@@ -1,0 +1,26 @@
+extends layout.pug
+
+
+
+block content
+ h3.pl-4.ml-4 Register
+ if errors
+  each error in errors
+   div.alert.alert-danger.m-4 #{error}
+ form(method="post" action="/register")
+   .form-group  
+     label(for='name') Name
+     input#exampleInputEmail1.form-control(type='text' name="name"  required)
+   .form-group  
+     label(for='username') Email address
+     input#exampleInputEmail1.form-control(type='email' name="username" aria-describedby='emailHelp' required)
+     small#emailHelp.form-text.text-muted We&apos;ll never share your email with anyone else.
+   .form-group
+     label(for='exampleInputPassword1') Password
+     input#exampleInputPassword1.form-control(type='password' name="password" required)
+   .form-group.form-check
+     input#exampleCheck1.form-check-input(type='checkbox')
+     label.form-check-label(for='exampleCheck1') Check me out
+   button.btn.btn-primary(type='submit') Submit
+   span.ml-4.pl-4 Already registered ?
+    a.p-0.m-0.container(href="/login")  Login
