@@ -5,9 +5,8 @@ const mongoose = require("mongoose");
 
 
 const db = process.env.MONGODB;
-// const db ="mongodb+srv://kiran:kiran@cluster0-zrsby.mongodb.net/test?retryWrites=true&w=majority";
-// const db = mongodb://heroku_nfr6vrvb:esfpt0vj80aofe7hqp144bs51r@ds239967.mlab.com:39967/heroku_nfr6vrvb
 
+// Connecting to the database-----
 const ConnectDB = async ()=>{
   try{
      await mongoose.connect(db,{
